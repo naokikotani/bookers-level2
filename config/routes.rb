@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :books
   
   post "/users/:id" => "books#create"
-  get "/homes/about" => "homes#about"
+  get "/home/about" => "homes#about"
   get "/devise/registrations/new" => "homes#signup"
   get "/devise/sessions/new" => "homes#login"
 end
