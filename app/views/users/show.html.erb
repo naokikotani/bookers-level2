@@ -1,0 +1,12 @@
+<%= flash[:notice] %>
+
+<%= link_to "Users", users_path %>
+<%= link_to "Books", books_path %>
+
+<%= render 'users/list', book: @book, user: @user %>
+
+<h2>Books</h2>
+<% @books.each do |book| %>
+<p><%= link_to book.title, book_path(book.id) %></p>
+<p><%= book.body %></p>
+<% end %>
