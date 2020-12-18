@@ -1,15 +1,30 @@
-<%= render 'users/list', book: @book, user: @user %>
+<%= render 'users/header', user: @user %>
 
-<h1>Users</h1>
-<table>
-<tr>
-  <th>image</th>
-  <th>name</th>
-</tr>
-<% @users.each do |user| %>
-<tr>
-  <td><%= user.name %></td>
-  <td><%= link_to "show", user_path(user.id) %></td>
-</tr>
-<% end %>
-</table>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-2">
+        <%= render 'users/list', book: @book, user: @user %>
+    </div>
+    <div class="col-xs-6">
+      <h1>Users</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">image</th>
+            <th scope="col">name</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @users.each do |user| %>
+            <tr>
+              <th scope="row"><%= user.profile_image %></th>
+              <td><%= user.name %></td>
+              <td><%= link_to "show",user_path(user.id) %></td>
+            </tr>
+            <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -2,9 +2,11 @@
 <p>name <%= user.name %></p>
 <p>introcuction <%= user.introduction %></p>
 <%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
-<%= link_to "edit", edit_user_path(user.id) %>
+<%= link_to edit_user_path(user.id) do %>
+　<i class="fas fa-user-edit"></i>
+<% end %>
 
-<h2>New Book</h2>
+<h2>New book</h2>
 <% if book.errors.any? %>
   <%= book.errors.count %>件のerrorが発生しました
   <% book.errors.full_messages.each do |message| %>

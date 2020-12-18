@@ -1,0 +1,30 @@
+<header class = "bg-dark">
+<div class="container p-4">
+  <div class="row">
+    <div class="col-6">
+      <%= link_to "Bookers", root_path %>
+      
+    </div>
+    <div class="col">
+      <%= link_to user_path(user.id) do %>
+　      <i class="fas fa-home">Home</i>
+      <% end %>
+    </div>
+    <div class="col">
+      <%= link_to users_path do %>
+　      <i class="fas fa-users">Users</i>
+      <% end %>
+    </div>
+    <div class="col">
+      <%= link_to books_path do %>
+　      <i class="fas fa-book">Books</i>
+      <% end %>
+    </div>
+    <div class="col">
+      <%= link_to destroy_user_session_path, method: :delete do %>
+　      <i class="fas fa-sign-out-alt">logout</i>
+      <% end %>
+    </div>
+  </div>
+</div>
+</header>

@@ -2,25 +2,18 @@
 <html>
   <head>
     <title>BookerLevel2</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <% if user_signed_in? %>
-      <li>
-        <%= link_to "logout", destroy_user_session_path, method: :delete %>
-      </li>
+        
     <% else %>
-      <li>
-        <%= link_to "Sign Up", new_user_registration_path %>
-      </li>
-      <li>
-        <%= link_to "Log in", new_user_session_path %>
-      </li>
+        
     <% end %>
     <%= yield %>
   </body>

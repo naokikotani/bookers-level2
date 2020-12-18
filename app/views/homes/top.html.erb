@@ -1,6 +1,6 @@
-<p><%= link_to "Home", root_path %></p>
-<p><%= link_to "About", "/home/about" %></p>
-<p><%= link_to "login", "/devise/sessions/new" %></p>
-<p><%= link_to "sign up", "/devise/registrations/new" %></p>
+<%= render 'homes/list' %>
 
-<h1>welcome to Bookers</h1>
+<h1>welcome to <i class="fas fa-book"></i>Bookers</h1>
+
+<%= link_to "Log in", new_user_session_path %>
+<%= link_to "Sign Up", new_user_registration_path %>

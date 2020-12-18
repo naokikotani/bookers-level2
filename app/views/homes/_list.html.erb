@@ -1,0 +1,29 @@
+<header class = "bg-dark">
+<div class="container p-3">
+  <div class="row">
+    <div class="col-6">
+      <%= link_to "Bookers", root_path %>
+    </div>
+    <div class="col">
+      <%= link_to root_path do %>
+　      <i class="fas fa-home">Home</i>
+      <% end %>
+    </div>
+    <div class="col">
+      <%= link_to "/home/about" do %>
+　      <i class="fas fa-link">About</i>
+      <% end %>
+    </div>
+    <div class="col">
+      <%= link_to new_user_registration_path do %>
+　      <i class="fas fa-user-plus">sign up</i>
+      <% end %>
+    </div>
+    <div class="col">
+      <%= link_to new_user_session_path do %>
+　      <i class="fas fa-sign-in-alt">login</i>
+      <% end %>
+    </div>
+  </div>
+</div>
+</header>
