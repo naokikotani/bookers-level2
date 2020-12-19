@@ -18,7 +18,11 @@
         <tbody>
           <% @users.each do |user| %>
             <tr>
-              <th scope="row"><%= user.profile_image %></th>
+              <th scope="row">
+                <%= link_to user_path(user.id) do %>
+                  <%= attachment_image_tag user, :profile_image, size: "50x50", fallback: "no_image.jpg" %>
+                <% end %>
+                </th>
               <td><%= user.name %></td>
               <td><%= link_to "show",user_path(user.id) %></td>
             </tr>
